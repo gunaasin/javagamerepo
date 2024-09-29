@@ -1,23 +1,27 @@
+
+import { Box , Text, Image } from "@chakra-ui/react";
 import {Link} from "react-router-dom";
 
 
 export const Navbar = () => {
   
   return (
-    <div className="nav-component">
- <div className="logoimg"><img src="codelogo.png" alt="" /></div>
-        
-     <h3 className="nav-Link"> <Link to={"/"}>Concurrency and Multithreading</Link></h3>
-     <h3 className="nav-Link"> <Link to={"/Component2"}> Generics and Type Erasure</Link></h3>
-     <h3 className="nav-Link"> <Link to={"/Component3"}> Exception Handling</Link></h3>
-     <h3 className="nav-Link"> <Link to={"/Component4"}> Design Patterns</Link></h3>
-     <h3 className="nav-Link"> <Link to={"/Component5"}> Enums</Link></h3>
-     <h3 className="nav-Link"> <Link to={"/Component6"}> Type Casting</Link></h3>
-     <h3 className="nav-Link"> <Link to={"/Component7"}> Method Overloading</Link></h3>
-     {/* <h3 className="nav-Link"> <Link to={"/Component8"}> Module System</Link></h3> */}
-     {/* <h3 className="nav-Link"> <Link to={"/Component9"}> Error Handling</Link></h3> */}
-     <h3 className="nav-Link"> <Link to={"/Component10"}> Performance Optimization</Link></h3>
-  
-    </div>
+    <Box h="100vh"
+     w="18%"
+     position={"sticky"}
+     top="0.1px"
+     >
+      <a href="https://learncode-seven.vercel.app/"><Image w="180px" h="75px"src="codelogo.png" marginLeft={5} px={1}/></a>
+
+       <Link to={"/"}><Text fontSize='md' bg="#130D1E" mx={4} my={2} p={3} className="Nav-Link">Concurrency and Multithreading</Text></Link>
+       <Link to={"/Component2"}><Text fontSize='md' bg="#130D1E" mx={4} my={2} className="Nav-Link" p={3}>Generics and Type Erasure</Text></Link>
+       <Link to={"/Component3"}><Text fontSize='md' bg="#130D1E" mx={4} my={2} p={3} className="Nav-Link">Exception Handling</Text> </Link>
+       <Link to={"/Component4"}><Text fontSize='md' bg="#130D1E" mx={4} my={2} p={3} className="Nav-Link">Design Patterns</Text></Link>
+       <Link to={"/Component5"}><Text fontSize='md' bg="#130D1E" mx={4} my={2} p={3} className="Nav-Link">Enums</Text> </Link>
+       <Link to={"/Component6"}><Text fontSize='md' bg="#130D1E" mx={4} my={2} p={3} className="Nav-Link"> Type Casting</Text> </Link>
+       <Link to={"/Component7"}><Text fontSize='md' bg="#130D1E" mx={4} my={2} p={3} className="Nav-Link"> Method Overloading</Text></Link>
+       <Link to={"/Component10"}><Text fontSize='md' bg="#130D1E" mx={4} my={2} p={3} className="Nav-Link" >Performance Optimization</Text> </Link>
+    </Box>
+     
   )
 }

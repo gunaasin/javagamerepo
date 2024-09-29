@@ -1,4 +1,15 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+
 body{
-    overflow: hidden;
     scroll-behavior:smooth ;
+    overflow-x:hidden;
+}
+
+::selection{
+    background-color: rgb(247, 250, 255);
+    color:rgb(2, 2, 24)
 }
