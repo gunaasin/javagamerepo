@@ -2,70 +2,180 @@ import React from 'react'
 import { Maincom } from '../Structrue/Maincom';
 export const Component4 = () => {
   const codesnip = {
-    java: `public class Singleton {
+    java: `// Main class to run the program
+public class Main {
+    public static void main(String[] args) {
+        // Create a hero
+        Hero hero = new Hero("Archer");
 
-        // Private static instance variable
-       
-    
-        // Private constructor to prevent instantiation from outside
-        private () {}
-    
-        // Public static method to get the singleton instance
-        public static Singleton getInstance() {
-            // Lazy initialization: create the instance only when it's accessed for the first time
-            if (instance == null) {
-                instance = new Singleton();
-            }
-            return instance;
-        }
-    
-        // Example method of the singleton class
-        public void showMessage() {
-            System.out.println("Hello, I am a singleton!");
-        }
-    
-        public  void main(String[] args) {
-            // Get the singleton instance
-            Singleton singleton = Singleton.getInstance();
-    
-            // Call a method of the singleton instance
-            singleton.showMessage();
-        }
+        // Create command objects for the hero's actions
+        Command moveCommand = new MoveCommand(hero);
+        Command attackCommand = new AttackCommand(hero);
+
+        // Create the invoker (control panel)
+        CommandInvoker controlPanel = new CommandInvoker();
+
+        // Execute the move command
+        controlPanel.setCommand(moveCommand);
+        controlPanel.executeCommand();  // Output: Archer moves forward!
+
+        // Execute the attack command
+        controlPanel.setCommand(attackCommand);
+        controlPanel.executeCommand();  // Output: Archer attacks the enemy!
     }
-    
+}
+
+// Command interface
+public interface Command {
+    void execute();
+}
+
+// Hero class
+public class Hero {
+     String name; 
+
+    public Hero(String name) {
+        this.name = name;
+    }
+
+    public void move() {
+        System.out.println(name + " moves forward!");
+    }
+
+    public void attack() {
+        System.out.println(name + " attacks the enemy!");
+    }
+}
+
+// Move Command
+public class MoveCommand implements Command {
+     Hero hero;
+
+    public MoveCommand(Hero hero) {
+        this.hero = hero;
+    }
+
+    @Override
+    public void execute() {
+        hero.move();  // Delegates the move action to the hero
+    }
+}
+
+// Attack Command
+public class AttackCommand implements Command {
+     Hero hero;
+
+    public AttackCommand(Hero hero) {
+        this.hero = hero;
+    }
+
+    @Override
+    public void execute() {
+        hero.attack();  // Delegates the attack action to the hero
+    }
+}
+
+// Command Invoker (Control Panel)
+public class CommandInvoker {
+    private Command command;
+
+    public void setCommand(Command command) {
+        this.command = command;
+    }
+
+    public void executeCommand() {
+        command.execute();
+    }
+}
+
     `}
     const answer ={
-      java:`public class Singleton {
+      java:`// Main class to run the program
+public class Main {
+    public static void main(String[] args) {
+        // Create a hero
+        Hero hero = new Hero("Archer");
 
-        // Private static instance variable
-        private static Singleton instance;
-    
-        // Private constructor to prevent instantiation from outside
-        private Singleton() {}
-    
-        // Public static method to get the singleton instance
-        public static Singleton getInstance() {
-            // Lazy initialization: create the instance only when it's accessed for the first time
-            if (instance == null) {
-                instance = new Singleton();
-            }
-            return instance;
-        }
-    
-        // Example method of the singleton class
-        public void showMessage() {
-            System.out.println("Hello, I am a singleton!");
-        }
-    
-        public static void main(String[] args) {
-            // Get the singleton instance
-            Singleton singleton = Singleton.getInstance();
-    
-            // Call a method of the singleton instance
-            singleton.showMessage();
-        }
+        // Create command objects for the hero's actions
+        Command moveCommand = new MoveCommand(hero);
+        Command attackCommand = new AttackCommand(hero);
+
+        // Create the invoker (control panel)
+        CommandInvoker controlPanel = new CommandInvoker();
+
+        // Execute the move command
+        controlPanel.setCommand(moveCommand);
+        controlPanel.executeCommand();  // Output: Archer moves forward!
+
+        // Execute the attack command
+        controlPanel.setCommand(attackCommand);
+        controlPanel.executeCommand();  // Output: Archer attacks the enemy!
     }
-    
+}
+
+// Command interface
+public interface Command {
+    void execute();
+}
+
+// Hero class
+public class Hero {
+    private String name; 
+
+    public Hero(String name) {
+        this.name = name;
+    }
+
+    public void move() {
+        System.out.println(name + " moves forward!");
+    }
+
+    public void attack() {
+        System.out.println(name + " attacks the enemy!");
+    }
+}
+
+// Move Command
+public class MoveCommand implements Command {
+    private Hero hero;
+
+    public MoveCommand(Hero hero) {
+        this.hero = hero;
+    }
+
+    @Override
+    public void execute() {
+        hero.move();  // Delegates the move action to the hero
+    }
+}
+
+// Attack Command
+public class AttackCommand implements Command {
+    private Hero hero;
+
+    public AttackCommand(Hero hero) {
+        this.hero = hero;
+    }
+
+    @Override
+    public void execute() {
+        hero.attack();  // Delegates the attack action to the hero
+    }
+}
+
+// Command Invoker (Control Panel)
+public class CommandInvoker {
+    private Command command;
+
+    public void setCommand(Command command) {
+        this.command = command;
+    }
+
+    public void executeCommand() {
+        command.execute();
+    }
+}
+ 
     `}
     
   return (
@@ -73,7 +183,7 @@ export const Component4 = () => {
 
     <Maincom  title={"Design Patterns"}
     answer={answer}
-    game={"https://html-classic.itch.zone/html/2361181/td1.0.3/index.html"}
+    game={"https://html-classic.itch.zone/html/3198875/index.html"}
     url={'https://videoconsole-lac.vercel.app/?url=https://videos.sproutvideo.com/embed/ea90d5b71c1de9ca63/4edd0d41b72ec4f9'}
        steps={['Starting the Game : Run the TowerDefenseGame class as the main class to start the game.',
        

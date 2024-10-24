@@ -1,8 +1,8 @@
 import React from 'react'
 import { Maincom } from '../Structrue/Maincom'
 export const Component7 = () => {
-  const codesnip = {
-    java: `public class MathOperations {
+    const codesnip = {
+        java: `public class MathOperations {
         // Method to add two integers
         public int add(int a, int b) {
             return a + b;
@@ -45,7 +45,7 @@ export const Component7 = () => {
     
     `}
     const answer = {
-      java: `public class MathOperations {
+        java: `public class MathOperations {
         // Method to add two integers
         public int add(int a, int b) {
             return a + b;
@@ -86,26 +86,36 @@ export const Component7 = () => {
     }
     
       `}
-  return (
-    <>
-    <Maincom  title={"Method Overloading"}
-  game={"https://html-classic.itch.zone/html/4203615/index.html"}
-  
-  url={'https://videoconsole-lac.vercel.app/?url=https://videos.sproutvideo.com/embed/ac90d5b71c1ce1c525/38814a397a683858'}
-    steps={['Choose a weapon to craft',
-        
-        'Follow the prompts to select materials and attributes for the chosen weapon.',
+    return (
+        <>
+            <Maincom title={"Method Overloading"}
+                game={"https://html-classic.itch.zone/html/4203615/index.html"}
 
-        'Receive a message indicating the completion of the crafting process.',
+                url={'https://videoconsole-lac.vercel.app/?url=https://videos.sproutvideo.com/embed/ac90d5b71c1ce1c525/38814a397a683858'}
+                steps={[
+                    'Let’s consider a weapon crafting system in a game to demonstrate method overloading. Players can craft different types of weapons with varying levels of complexity, from crafting a basic weapon to creating enhanced or custom weapons with special materials.',
 
-        'The game ends after crafting the weapon.',
+                    'Game Scenario for Method Overloading (Weapon Crafting System):',
+                    'In this scenario, the player can:',
+
+                    'Craft a basic weapon (no parameters, just a simple crafting process).',
+                    'Craft a weapon with specific material (with one parameter indicating the material type).',
+                    'Craft a weapon with custom material and damage (with parameters for material and desired damage output).',
+                    'By using method overloading, the weapon crafting system can handle different levels of crafting complexity.',
+                    'Choose a weapon to craft',
+
+                    'Follow the prompts to select materials and attributes for the chosen weapon.',
+
+                    'Receive a message indicating the completion of the crafting process.',
+
+                    'The game ends after crafting the weapon.',
 
 
-   ]}
-       codesnip={codesnip}
-       answer={answer}
-       />
-       
-    </>
-  )
+                ]}
+                codesnip={codesnip}
+                answer={answer}
+            />
+
+        </>
+    )
 }

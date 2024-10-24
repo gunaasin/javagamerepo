@@ -12,7 +12,7 @@ export const Component6 = () => {
   
           // Explicit type casting (Narrowing Conversion)
           double doubleNum = 20.5;
-          int intNum = (int) doubleNum; // Explicitly converts double to int
+          int intNum = doubleNum; // Explicitly converts double to int
           System.out.println("doubleNum: " + doubleNum);
           System.out.println("intNum: " + intNum);
       }
@@ -40,10 +40,10 @@ export const Component6 = () => {
     <>
 
       <Maincom title={"Type Casting"}
-game={"https://html-classic.itch.zone/html/6688669/Knight,%20monsters%20and%20arena/index.html"}
+game={"https://html-classic.itch.zone/html/9663787/index.html"}
 
 url={'https://videoconsole-lac.vercel.app/?url=https://videos.sproutvideo.com/embed/0690d5b71c1ce1c78f/b4daf12e72d319a5'}
-        steps={['Knight Selection  :xPlayers choose a knight character to control in the arena. Each knight has different attributes such as health points, attack power, and special abilities.',
+        steps={['Imagine a superhero game where your character has different types of energy levels based on the enemies they face. These energy levels are stored as different data types Stamina small power boosts, stored as int Magic Power (medium-level abilities, stored as double).Knight Selection  :xPlayers choose a knight character to control in the arena. Each knight has different attributes such as health points, attack power, and special abilities.',
           
           'Monster Encounter  : The knight encounters different types of monsters in the arena, each with its own strengths, weaknesses, and abilities.Monsters may attack the knight using various attacks or special abilities.',
           
